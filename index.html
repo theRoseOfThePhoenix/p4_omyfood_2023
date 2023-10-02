@@ -16,16 +16,58 @@
 
 <body>
     <div class="main-contener">
+
+        <!--oh my food logo-->
         <header>
-
+            <div class="logo">  
+                <h1>ohmyfood</h1>
+            </div>
         </header>
-        <main>
 
+        <!--localisation-->
+        <section class="location">
+            <form method="post" action="localisation" class="Search-bar">
+                <i class="fa-solid fa-location-dot"></i>
+                <label for="Search-bar"></label>
+                <input type="search" id="Search-bar" name="villes" placeholder="Paris, Belleville"> 
+            </form>
+        </section>
+        
+        <main>
+            <section class="hero">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <button>Explorez les menus</button>
+            </section>
+
+            <section class="fonctionnement">
+                <h2 class="titre_fonctionnement">Fonctionnement</h2>
+                <div class="choice">
+                    <p class="nombre">1</p>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p>Choisissez un restaurant</p>
+                </div>
+                <div class="choice">
+                    <p class="nombre">2</p>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p>Composez votre menu</p>
+                </div>
+                <div class="choice">
+                    <p class="nombre">3</p>
+                    <i class="fa-solid fa-store"></i>
+                    <p>Dégustez au restaurant</p>
+                </div>           
+            </section>
+
+
+            <section class="restaurants">
+
+            </section>
         </main>
+
         <footer>
 
         </footer>
-    </div>
-    
+    </div>    
 </body>
 </html>
