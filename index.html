@@ -20,53 +20,54 @@
         <!--oh my food header-->
         <header>
             <div class="logo">  
-                <h1>ohmyfood</h1>
+                <h1 class="logo_title">ohmyfood</h1>
             </div>
         </header>
 
         <!--localisation-->
         <section class="location">
-            <form method="post" action="localisation" class="Search-bar">
+            <form method="post" action="localisation" class="location_search-bar">
                 <i class="fa-solid fa-location-dot"></i>
-                <label for="Search-bar"></label>
-                <input type="search" id="Search-bar" name="villes" placeholder="Paris, Belleville"> 
+                <label for="search-bar"></label>
+                <input type="search" id="search-bar" name="villes" placeholder="Paris, Belleville"> 
             </form>
         </section>
         
         <main>
             <!--hero-->
             <section class="hero">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button>Explorez les menus</button>
+                <h2 class="hero_title">Réservez le menu qui vous convient</h2>
+                <p class="hero_txt">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <button class="hero_btn">Explorez les menus</button>
             </section>
 
             <!--fonctionnement-->
                 <section class="fonctionnement">
-                <h2 class="titre_fonctionnement">Fonctionnement</h2>
-                <div class="choice">
-                    <p class="choice_chiffres">1</p>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>Choisissez un restaurant</p>
-                </div>
-                <div class="choice">
-                    <p class="choice_chiffres">2</p>
+                    <h2 class="title_fonctionnement">Fonctionnement</h2>
+
+                    <div class="fonctionnement_choice">
+                        <p class="fonctionnement_chiffres">1</p>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
+                <div class="fonctionnement_choice">
+                    <p class="fonctionnement_chiffres">2</p>
                     <i class="fa-solid fa-list-ul"></i>
                     <p>Composez votre menu</p>
                 </div>
-                <div class="choice">
-                    <p class="choice_chiffres">3</p>
+                <div class="fonctionnement_choice">
+                    <p class="fonctionnement_chiffres">3</p>
                     <i class="fa-solid fa-store"></i>
                     <p>Dégustez au restaurant</p>
                 </div>           
             </section>
 
             <!--restaurant-->
-            <section class="card_restaurants">
-                <h2>Restaurants</h2>
+            <section class="card">
+                <h2 class="card_restaurant">Restaurants</h2>
                 <div>
-                    <img>
-                        <p>
+                    <img class="card_img">
+                        <p class="card_paragraphe">
                             <strong>La palette du goût</strong>
                         <br>Ménilmontant</p>
                                 <i class="fa-regular fa-heart"></i>
@@ -101,7 +102,7 @@
                 <p>Contact</p>
             </div>
         </footer>
-        
+
     </div>    
 </body>
 </html>
