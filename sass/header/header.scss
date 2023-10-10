@@ -17,13 +17,14 @@ h1 {
     border-top: 3px solid rgba(208, 208, 208, 0.65)
 }
 #search-bar{
-    font-size: 16px;
+    font-size: large;
     font-style:normal;
     font-weight: 500;
     border: hidden;
     background-color: $lighgrey;
+    color: $black;
 }
 
 input{
-    width: 129px;
+    width: 145px;
 }

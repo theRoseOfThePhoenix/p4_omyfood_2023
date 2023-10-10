@@ -11,3 +11,10 @@
     line-height: normal;
     
 }
+@mixin typo1 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
