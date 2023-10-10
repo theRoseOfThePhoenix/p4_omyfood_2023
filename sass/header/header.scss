@@ -1,29 +1,27 @@
 h1 {
-    font-family: Shrikhand;
+    font-family: $fontshrikhand;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
-    display: flex;
+    @include flexmid;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex-shrink: 0;
   }
 
 .location_search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexmid;
     gap: 7px;
-    font-family: Roboto;
-    background-color: $grey;
+    font-family: $fontroboto;
+    background-color: $lighgrey;
     height: 50px;
+    border-top: 3px solid rgba(208, 208, 208, 0.65)
 }
 #search-bar{
     font-size: 16px;
-    font-style: normal;
+    font-style:normal;
     font-weight: 500;
     border: hidden;
+    background-color: $lighgrey;
 }
 
 input{

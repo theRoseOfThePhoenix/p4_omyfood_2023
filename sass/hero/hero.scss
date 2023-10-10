@@ -1,0 +1,26 @@
+.hero{
+    @include flexmid;
+    flex-direction: column;
+    height: 327px;
+    padding: 0px 30px;
+    background-color: $grey2;
+
+    &_title{
+        @include titre;           
+}
+    &_txt{     
+        color: $grey;
+        
+}
+    &_btn{
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+        color: $white;
+        
+}
+}
+
+
+
