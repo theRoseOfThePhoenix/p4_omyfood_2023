@@ -55,17 +55,27 @@ body {
 h1 {
   font-family: "Shrikhand";
   font-size: 28px;
-  font-style: normal;
   font-weight: 400;
+  margin: 13px 89px;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  flex-shrink: 0;
 }
 
-.location_search-bar {
+.location {
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,21 +83,14 @@ h1 {
   gap: 7px;
   font-family: "Roboto";
   background-color: #EAEAEA;
-  height: 50px;
   border-top: 3px solid rgba(208, 208, 208, 0.65);
 }
-
-#search-bar {
+.location_search-bar {
+  width: 145px;
   font-size: large;
-  font-style: normal;
   font-weight: 500;
   border: hidden;
   background-color: #EAEAEA;
-  color: #000000;
-}
-
-input {
-  width: 145px;
 }
 
 .hero {
@@ -113,9 +116,7 @@ input {
 .hero_btn {
   font-family: Roboto;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 600;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: #ffffff;
   width: 220px;
@@ -126,6 +127,69 @@ input {
 .hero_btn:hover {
   opacity: 0.8;
   box-shadow: 0px 0px 10px 8px rgba(208, 208, 208, 0.85);
+}
+
+.fonctionnement {
+  margin: 30px 20px 50px 20px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.fonctionnement_title {
+  padding: 1.25em 0em 1.25em 0em;
+}
+.fonctionnement_choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 4.5em;
+  background: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+}
+.fonctionnement_choice i {
+  font-size: 18px;
+  color: gray;
+  position: relative;
+  right: 25px;
+}
+.fonctionnement_choice i:hover {
+  color: #9356DC;
+}
+.fonctionnement_chiffres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #9356DC;
+  color: #ffffff;
+  font-weight: 400;
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  padding: 5px;
+  position: absolute;
+  left: 9px;
+}
+.fonctionnement_cases {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+.fonctionnement_cases p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card {
+  background-color: #F6F6F6;
+}
+
+footer {
+  background-color: #353535;
 }
 
 /*# sourceMappingURL=style.css.map */

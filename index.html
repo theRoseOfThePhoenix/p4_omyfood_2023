@@ -22,14 +22,12 @@
             <div class="logo">  
                 <h1 class="logo_title">ohmyfood</h1>
             </div>
-        
-
-        <!--localisation-->
+                   <!--localisation-->
         <section class="location">
-            <form method="post" action="localisation" class="location_search-bar">
+            <form method="post" action="localisation" class="location_form">
                 <i class="fa-solid fa-location-dot"></i>
                 <label for="search-bar"></label>
-                <input type="search" id="search-bar" name="villes" placeholder="Paris, Belleville"> 
+                <input class="location_search-bar" id="search-bar" name="villes" placeholder="Paris, Belleville"> 
             </form>
         </section>
     </header>
@@ -48,18 +46,24 @@
 
                     <div class="fonctionnement_choice">
                         <p class="fonctionnement_chiffres">1</p>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p>Choisissez un restaurant</p>
+                            <div class="fonctionnement_cases">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p>Choisissez un restaurant</p>
+                            </div>
                     </div>
                     <div class="fonctionnement_choice">
                         <p class="fonctionnement_chiffres">2</p>
-                        <i class="fa-solid fa-list-ul"></i>
-                        <p>Composez votre menu</p>
+                            <div class="fonctionnement_cases">
+                            <i class="fa-solid fa-list-ul"></i>
+                            <p>Composez votre menu</p>
+                            </div>
                     </div>
                     <div class="fonctionnement_choice">
                         <p class="fonctionnement_chiffres">3</p>
+                        <div class="fonctionnement_cases">
                         <i class="fa-solid fa-store"></i>
                         <p>Dégustez au restaurant</p>
+                        </div>
                     </div>           
                 </section>
 

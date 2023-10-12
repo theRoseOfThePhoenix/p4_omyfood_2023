@@ -1,0 +1,57 @@
+.fonctionnement{
+    margin: 30px 20px 50px 20px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    &_title{
+        padding: 1.25em 0em 1.25em 0em;
+    }
+
+    &_choice{        
+        @include flexmid;
+        height: 4.5em;
+        background: $grey2;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+
+        i{
+            font-size: 18px;
+            color: gray;    
+            position: relative;
+            right: 25px;
+
+        }
+                    
+        i:hover{
+            color: $purple;
+        }
+    }
+
+    &_chiffres{
+        @include flexmid;
+        background-color: $purple;
+        color: $white;
+        font-weight: 400;
+        height: 24px;
+        width: 24px;
+        border-radius: 50px;
+        padding: 5px;
+        position: absolute;
+        left: 9px;
+    }
+
+    &_cases{
+        @include flexrow;
+        gap: 0.5em;
+        p{
+            @include typo1
+        }
+        
+    }
+
+}
+
+
+
