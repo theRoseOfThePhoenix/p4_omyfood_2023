@@ -105,10 +105,10 @@ h2 {
   background-color: #F6F6F6;
 }
 .hero_title {
-  font-size: 24px;
+  font-family: Shrikhand;
+  font-size: 28px;
   font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  font-weight: 400;
 }
 .hero_txt {
   color: #353535;
@@ -116,7 +116,7 @@ h2 {
 .hero_btn {
   font-family: Roboto;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: #ffffff;
   width: 220px;
@@ -131,19 +131,19 @@ h2 {
 
 .fonctionnement {
   margin: 30px 20px 50px 20px;
-  height: 440px;
   display: flex;
   flex-direction: column;
   gap: 26px;
 }
 .fonctionnement_title {
-  padding: 1.25em 0em 1.25em 0em;
+  padding: 20px 0px 0px;
 }
 .fonctionnement_choice {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
   height: 4.5em;
   background: #F6F6F6;
   border-radius: 20px;
@@ -152,8 +152,8 @@ h2 {
 .fonctionnement_choice i {
   font-size: 18px;
   color: gray;
-  position: relative;
-  right: 25px;
+  position: absolute;
+  left: 35px;
 }
 .fonctionnement_choice i:hover {
   color: #9356DC;
@@ -171,7 +171,7 @@ h2 {
   border-radius: 50px;
   padding: 5px;
   position: absolute;
-  left: 9px;
+  left: -15px;
 }
 .fonctionnement_cases {
   display: flex;
@@ -181,15 +181,108 @@ h2 {
 .fonctionnement_cases p {
   font-family: Roboto;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 40px 20px 20px 20px;
+}
+.restaurants_title {
+  font-weight: 800;
+  margin: 10px 0 20px 0;
+}
+.restaurants a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .card {
-  background-color: #F6F6F6;
+  width: 340px;
+  height: 251px;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+}
+.card_nouveau {
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  color: #008766;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 3px;
+  z-index: 1;
+}
+.card_img {
+  width: 100%;
+  object-fit: cover;
+  height: 172px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  position: relative;
+}
+.card_txt {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  align-items: center;
+}
+.card .card_title h3 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+.card i, .card fa-regular fa-heart {
+  font-size: 33px;
 }
 
-footer {
+.footer {
+  padding: 25px 22px;
   background-color: #353535;
+  color: #ffffff;
+}
+.footer_title {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Shrikhand";
+  font-weight: normal;
+  padding-bottom: 16px;
+}
+.footer_txt {
+  display: grid;
+  gap: 7px;
+}
+.footer i {
+  font-size: small;
+}
+
+.footer fa-utensils {
+  padding-right: 5px;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  border-radius: 50px;
+}
+.menu_title {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Shrikhand";
 }
 
 /*# sourceMappingURL=style.css.map */

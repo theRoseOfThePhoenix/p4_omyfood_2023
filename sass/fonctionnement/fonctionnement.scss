@@ -1,16 +1,16 @@
 .fonctionnement{
     margin: 30px 20px 50px 20px;
-    height: 440px;
     display: flex;
     flex-direction: column;
     gap: 26px;
 
     &_title{
-        padding: 1.25em 0em 1.25em 0em;
+        padding: 20px 0px 0px;
     }
 
     &_choice{        
         @include flexmid;
+        position: relative;
         height: 4.5em;
         background: $grey2;
         border-radius: 20px;
@@ -19,8 +19,8 @@
         i{
             font-size: 18px;
             color: gray;    
-            position: relative;
-            right: 25px;
+            position: absolute;
+            left: 35px;
 
         }
                     
@@ -39,7 +39,7 @@
         border-radius: 50px;
         padding: 5px;
         position: absolute;
-        left: 9px;
+        left: -15px;
     }
 
     &_cases{

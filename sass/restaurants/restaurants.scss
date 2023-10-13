@@ -1,3 +1,52 @@
-.card{
+.restaurants{
     background-color: $grey2;
+    padding: 40px 20px 20px 20px;
+    &_title{
+        font-weight: 800;
+        margin: 10px 0 20px 0;
+    }
+    a{
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.card{
+    width: 340px;
+    height: 251px;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+
+    &_nouveau{
+        @include nouveau;
+    }
+
+    &_img{
+        width: 100%;
+        object-fit: cover;
+        height: 172px;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        position: relative;
+    }
+
+    &_txt{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        align-items: center;
+        
+    }
+    .card_title h3{
+        @include titre2;
+        font-size: 18px;
+        padding-bottom: 8px;
+    }
+    i ,fa-regular fa-heart{
+        font-size: 33px;
+    }
 }

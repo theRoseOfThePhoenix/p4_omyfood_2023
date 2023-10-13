@@ -10,14 +10,32 @@
 }
 
 @mixin titre {
-    font-size: 24px;
+    font-family: Shrikhand;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    
+    font-weight: 400;   
+}
+@mixin titre2 {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;   
 }
 @mixin typo1 {
     font-family: Roboto;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+
+@mixin nouveau{
+    width: 80px;
+    height: 29px;
+    background-color: $green;
+    color: $dark-green;
+    @include flexmid;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 3px;
+    z-index: 1;
 }

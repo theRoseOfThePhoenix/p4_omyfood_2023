@@ -1,0 +1,9 @@
+.menu{
+    background-color: $grey2;
+    border-radius: 50px;
+    &_title{
+        @include titre;
+        font-family: $fontshrikhand;
+    }
+
+}
