@@ -1,9 +1,10 @@
-.logo{
+header{
     @include flexmid;
     flex-direction: column;
   }
 
 .location {
+    width: 100%;
     height: 50px;
     @include flexmid;
     gap: 7px;

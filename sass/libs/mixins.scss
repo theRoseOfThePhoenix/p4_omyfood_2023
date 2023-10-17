@@ -13,7 +13,8 @@
     font-family: Shrikhand;
     font-size: 28px;
     font-style: normal;
-    font-weight: 400;   
+    font-weight: 400;
+       
 }
 @mixin titre2 {
     font-size: 18px;
@@ -25,7 +26,29 @@
     font-size: 16px;
     font-weight: 700;
 }
+@mixin typo2 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+}
+@mixin typo3 {
+    font-size: 18px;
+    font-weight: 500;
+}
 
+@mixin btn {
+        @include typo1;
+        background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+        color: $white;
+        width: 220px;
+        height: 50px;
+        border-radius: 50px;
+        box-shadow: 0px 0px 10px 5px rgba(208, 208, 208, 0.65);
+        &:hover {
+            opacity: 0.8;
+            box-shadow: 0px 0px 10px 8px rgba(208, 208, 208, 0.85);
+        }
+        }
 
 @mixin nouveau{
     width: 80px;
