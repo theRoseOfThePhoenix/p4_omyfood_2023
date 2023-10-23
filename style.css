@@ -252,15 +252,18 @@ header {
   padding: 25px 22px;
   background-color: #353535;
   color: #ffffff;
+  display: grid;
+  gap: 7px;
 }
 .footer_title {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
+  font-size: 18px;
   font-family: "Shrikhand";
   font-weight: normal;
-  padding-bottom: 16px;
+  padding-bottom: 9px;
 }
 .footer_txt {
   display: grid;
@@ -295,11 +298,11 @@ header {
 .menu {
   background-color: #F6F6F6;
   border-radius: 50px 50px 0 0;
-  display: grid;
-  gap: 40px;
   position: relative;
   margin-top: -40px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+  display: grid;
+  gap: 15px;
 }
 .menu_title {
   font-family: Shrikhand;
@@ -340,6 +343,8 @@ hr {
   padding: 15px;
   border-radius: 15.043px;
   background: #ffffff;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -372,6 +377,7 @@ hr {
   box-shadow: 0px 0px 10px 5px rgba(208, 208, 208, 0.65);
   width: 186px;
   margin: auto;
+  font-weight: 500;
 }
 .btn:hover {
   opacity: 0.8;

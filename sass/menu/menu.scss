@@ -20,11 +20,11 @@
 .menu{
     background-color: $grey2;
     border-radius: 50px 50px 0 0;
-    display: grid;
-    gap: 40px;
     position: relative;
     margin-top: -40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    display: grid;
+    gap: 15px;
 
     &_title{
         @include titre;
@@ -56,10 +56,11 @@ hr{
 
 .case{
     display: flex;
-
     padding: 15px;
     border-radius: 15.043px;
     background: $white;
+    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+    justify-content: space-between;
     overflow: hidden; 
     white-space: nowrap;
     text-overflow: ellipsis; 
@@ -79,4 +80,5 @@ hr{
     @include btn;
     width: 186px;
     margin: auto;
+    font-weight: 500;
 }
