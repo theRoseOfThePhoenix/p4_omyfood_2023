@@ -1,0 +1,20 @@
+.vide {
+    font-size: xx-large;
+    transform: translateX(36px);
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+    &:hover {
+        opacity: 0;
+    }
+    &:hover+.plein {
+        transform: scale(1);
+    }
+}
+.plein {
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 400ms ease-in-out;
+    background: $gradient;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
