@@ -16,5 +16,5 @@
     transition: transform 400ms ease-in-out;
     background: $gradient;
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: border-box;
 }

@@ -267,7 +267,7 @@ header {
   transition: transform 400ms ease-in-out;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: border-box;
 }
 
 .tete-menu {
