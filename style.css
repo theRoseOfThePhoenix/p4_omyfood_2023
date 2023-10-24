@@ -252,13 +252,13 @@ header {
   font-size: xx-large;
   transform: translateX(36px);
   opacity: 1;
-  transition: opacity 400ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .vide:hover {
-  opacity: 0;
+  cursor: pointer;
 }
 .vide:hover + .plein {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 .plein {
@@ -267,7 +267,7 @@ header {
   transition: transform 400ms ease-in-out;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: border-box;
+  -webkit-background-clip: text;
 }
 
 .tete-menu {
