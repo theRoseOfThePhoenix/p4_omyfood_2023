@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b99a3d4fb4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style.css">
-    <title class="">Oh My Food Le délice des sens</title>
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>Le Délice des sens</title>
+        <!--favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="asset/Images et textes Ohmyfood/images/logo/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/asset/Images et textes Ohmyfood/images/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="asset/Images et textes Ohmyfood/images/logo/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <!--icone-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b99a3d4fb4.js" crossorigin="anonymous"></script>
+    </head>
 
 <body>
     <div class="main-contener">
@@ -27,84 +33,133 @@
         <section class="menu"> <!--fond gris-->
             <h2 class="menu_title">Le délice des sens
                 <span class="card-logo">
-                    <i class="fa-regular fa-heart vide"></i>
-                    <i class="fa-solid fa-heart plein"></i>
+                    <button class="btn-like btn--mr">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </span>
             </h2>
                 
             <!--entrées-->
             <section class="bloc"> <!--bloc-->
                 <h3 class="bloc_title">Entrées</h3><hr>
-                    <div class="case"> <!--case-->
+                    <div class="case case--1"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Tartare de thon</h4>
                             <p class="case_description">Assaisonné au yuzu</p>
                         </div>
-                            <p class="case_price">25<i class="fa-solid fa-euro-sign"></i></p>
+                            <div class="case_price">
+                                <b>25€</b>
+                            </div>
+                            <div class="check_anim">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--2"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Bouchée de homard croustillant</h4>
                             <p class="case_description">Et sa farandole de petits légumes</p>
                         </div>
-                            <p class="case_price">35<i class="fa-solid fa-euro-sign"></i></p>
+                        <div class="case_price">
+                            <b>35€</b>
+                        </div>
+                        <div class="check_anim">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
-                    <div class="case"> <!--case-->
-                        <h4 class="case_title">Poulet rôti aux herbes de Provence</h4>
+                    <div class="case case--3"> <!--case-->
+                        <div class="case_txt">
+                            <h4 class="case_title">Poulet rôti aux herbes de Provence</h4>
                             <p class="case_description">Et sa crème de truffe</p>
-                            <p class="case_price">40<i class="fa-solid fa-euro-sign"></i></p>
+                        </div>
+                        <div class="case_price">
+                            <b>40€</b>
+                        </div>
+                        <div class="check_anim">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
             </section>
 
             <!--plats-->
             <section class="bloc"> <!--bloc-->
                 <h3 class="bloc_title">Plats</h3><hr>
-                    <div class="case"> <!--case-->
+
+                    <div class="case case--4"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Poulet rôti aux herbes de Provence</h4>
                             <p class="case_description">Et sa crème de truffe</p>
                         </div>
-                            <p class="case_price">40<i class="fa-solid fa-euro-sign"></i></p>
+                        <div class="case_price">
+                            <b>40€</b>
+                        </div>
+                        <div class="check_anim">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--5"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Langouste rôtie</h4>
                             <p class="case_description">Et ses légumes de saison</p>
                         </div>
-                            <p class="case_price">35<i class="fa-solid fa-euro-sign"></i></p>
+                        <div class="case_price">
+                            <b>35€</b>
+                        </div>
+                        <div class="check_anim">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--6"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Côte de bœuf Angus</h4>
                             <p class="case_description">Et sa purée de panais</p>
                         </div>
-                            <p class="case_price">44<i class="fa-solid fa-euro-sign"></i></p>
+                        <div class="case_price">
+                            <b>44€</b>
+                        </div>
+                        <div class="check_anim">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                     </div>
             </section>
 
                     <!--Desserts-->
                     <section class="bloc"> <!--bloc-->
                         <h3 class="bloc_title">Desserts</h3><hr>
-                            <div class="case"> <!--case-->
+                            <div class="case case--7"> <!--case-->
                                 <div class="case_txt">
                                     <h4 class="case_title">Farandole de desserts</h4>
                                     <p class="case_description">Du chef</p>
                                 </div>
-                                    <p class="case_price">18<i class="fa-solid fa-euro-sign"></i></p>
+                                <div class="case_price">
+                                    <b>18€</b>
+                                </div>
+                                <div class="check_anim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
                             </div>
-                            <div class="case"> <!--case-->
+                            <div class="case case--8"> <!--case-->
                                 <div class="case_txt">
                                     <h4 class="case_title">Crème brulée </h4>
                                     <p class="case_description">Revisitée</p>
                                 </div>
-                                    <p class="case_price">22<i class="fa-solid fa-euro-sign"></i></p>
+                                <div class="case_price">
+                                    <b>22€</b>
+                                </div>
+                                <div class="check_anim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
                             </div>
-                            <div class="case"> <!--case-->
+                            <div class="case case--9"> <!--case-->
                                 <div class="case_txt">
                                     <h4 class="case_title">Tiramisu </h4>
                                     <p class="case_description">À la noisette</p>
                                 </div>
-                                    <p class="case_price">23<i class="fa-solid fa-euro-sign"></i></p>
+                                <div class="case_price">
+                                    <b>23€</b>
+                                </div>
+                                <div class="check_anim">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
                             </div>
                     </section>
                     <button class="btn">Commander</button>

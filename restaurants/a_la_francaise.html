@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b99a3d4fb4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style.css">
-    <title class="">Oh My Food À la française</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>À la française</title>
+        <!--favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="asset/Images et textes Ohmyfood/images/logo/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/asset/Images et textes Ohmyfood/images/logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="asset/Images et textes Ohmyfood/images/logo/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <!--icone-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b99a3d4fb4.js" crossorigin="anonymous"></script>
+    </head>
 <body>
+
     <div class="main-contener">
         <header class="tete-menu">
             <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
@@ -23,27 +31,30 @@
         <img class="img-restaurant" src="/asset/Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"> <!--le fond image fixe-->   
  
         <section class="menu"> <!--fond gris-->
-            <h2 class="menu_title">À la française
+            <h2 class="menu_title">À la française<em>
                 <span class="card-logo">
-                    <i class="fa-regular fa-heart vide"></i>
-                    <i class="fa-solid fa-heart plein"></i>
+                    <button class="btn-like btn--mr">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
                 </span>
-            </h2>
+            </em></h2>
                 
             <!--entrées-->
             <section class="bloc"> <!--bloc-->
                 <h3 class="bloc_title">Entrées</h3><hr>
-                    <div class="case"> <!--case-->
+                    <div class="case case--1"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Tartare de poulpe acidulé</h4>
                             <p class="case_description">Aux zestes d'orange</p>
                         </div>
-                            <p class="case_price">25<i class="fa-solid fa-euro-sign"></i></p>
-                        <div class="check_anim">
+                           <div class="case_price">
+                                <b>25€</b>
+                           </div>
+                            <div class="check_anim">
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--2"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Velouté de légumes d'antan</h4>
                             <p class="case_description">Carotte, panais, topinambour</p>
@@ -53,7 +64,7 @@
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--3"> <!--case-->
                         <div class="case_txt">
                         <h4 class="case_title">Soupe à l'oignon</h4>
                             <p class="case_description">Revisitée</p>
@@ -68,7 +79,7 @@
             <!--plats-->
             <section class="bloc"> <!--bloc-->
                 <h3 class="bloc_title">Plats</h3><hr>
-                    <div class="case"> <!--case-->
+                    <div class="case case--4"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Coquilles Saint-Jacques</h4>
                             <p class="case_description">Accompagnées d'une purée de panais</p>
@@ -78,7 +89,7 @@
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--5"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Magret de canard</h4>
                             <p class="case_description">Et parmentier de pommes de terre</p>
@@ -88,7 +99,7 @@
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </div>
-                    <div class="case"> <!--case-->
+                    <div class="case case--6"> <!--case-->
                         <div class="case_txt">
                             <h4 class="case_title">Pigeonneau d’Ille-et-Vilaine</h4>
                             <p class="case_description">Sur son lit de gnocchis aux légumes</p>
@@ -103,7 +114,7 @@
                     <!--Desserts-->
                     <section class="bloc"> <!--bloc-->
                         <h3 class="bloc_title">Desserts</h3><hr>
-                            <div class="case"> <!--case-->
+                            <div class="case case--7"> <!--case-->
                                 <div class="case_txt">
                                     <h4 class="case_title">Pétales de violettes glacés</h4>
                                     <p class="case_description">Et purée de noisettes</p>
@@ -113,7 +124,7 @@
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
                             </div>
-                            <div class="case"> <!--case-->
+                            <div class="case case--8"> <!--case-->
                                 <div class="case_txt">
                                     <h4 class="case_title">Fondant au chocolat</h4>
                                     <p class="case_description">Revisité</p>
@@ -123,7 +134,7 @@
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
                             </div>
-                            <div class="case"> <!--case-->
+                            <div class="case case--9"> <!--case-->
                                 <div class="case_txt">
                                     <h4 class="case_title">Millefeuille croustillant</h4>
                                     <p class="case_description">Myrtilles et pâte d’amande</p>

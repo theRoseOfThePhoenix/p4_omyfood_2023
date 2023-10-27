@@ -28,7 +28,7 @@
 }
 @mixin typo2 {
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
 }
 @mixin typo3 {
@@ -49,6 +49,7 @@
             box-shadow: 0px 0px 10px 8px rgba(208, 208, 208, 0.85);
         }
         }
+
 
 @mixin nouveau{
     width: 80px;

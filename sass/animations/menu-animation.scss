@@ -1,0 +1,19 @@
+@keyframes case-animation {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.case {
+    animation: case-animation 600ms 100ms ease-in-out;
+    animation-fill-mode: both;
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: 250ms * $i;
+        }
+    }
+}
