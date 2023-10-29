@@ -1,6 +1,26 @@
 .restaurants{
     background-color: $grey2;
     padding: 40px 20px 20px 20px;
+        @media only screen and (min-width: 768){
+            margin: 0 90px;
+        }
+        @media only screen and (min-width: 1200){
+            margin: 0 180px;
+        }
+        &_gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                @media only screen and (min-width: 576px){
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                gap: 25px 25px;
+            }
+            @media only screen and (min-width: 1200px){
+                gap: 50px 100px;
+            }
+        }
     &_title{
         font-weight: 800;
         margin: 10px 0 20px 0;
@@ -10,6 +30,7 @@
         color: $black;
     }
 }
+
 
 .card{
     width: 340px;

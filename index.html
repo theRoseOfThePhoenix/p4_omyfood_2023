@@ -44,14 +44,15 @@
             <section class="hero">
                 <h2 class="hero_title">Réservez le menu qui vous convient</h2>
                 <p class="hero_txt">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="hero_btn">Explorez nos restaurants</button>
+               <a href="#restaurants"><button class="hero_btn">Explorez nos restaurants</button></a>
             </section>
 
             <!--fonctionnement-->
                 <section class="fonctionnement">
                     <h2 class="fonctionnement_title">Fonctionnement</h2>
 
-                    <div class="fonctionnement_choice">
+                    <div class="fonctionnement_general">
+                        <div class="fonctionnement_choice">
                         <p class="fonctionnement_chiffres">1</p>
                             <div class="fonctionnement_cases">
                             <i class="fa-solid fa-mobile-screen-button"></i>
@@ -71,15 +72,17 @@
                         <i class="fa-solid fa-store"></i>
                         <p>Dégustez au restaurant</p>
                         </div>
-                    </div>           
+                    </div>
+                </div>          
                 </section>
 
             <!--restaurant-->
-            <section class="restaurants">
+            <section id="restaurants" class="restaurants"> 
             <!--titre -->
             <h2 class="restaurants_title">Restaurants</h2>
 
             <!--card-->
+            <div class="restaurants_gallery">
                 <a href="/restaurants/la_palette_du_gout.html">
                     <div class="card">
                         <div class="card_nouveau"><p>Nouveau</p></div> <!--mixin nouveau-->
@@ -144,8 +147,7 @@
                         </div>
                     </div>
                 </a>
-
-
+            </div>
             </section>
         </main>
 
@@ -157,7 +159,7 @@
                     <p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
                     <p><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
                     <p>Mentions légales</p>
-                    <p>Contact</p>
+                    <a href="mailto:contact-ohmyfood@gmail.com"><p>Contact</p></a>
                 </div>
             </section>
         </footer>

@@ -1,7 +1,10 @@
 body{
-    max-width: 375px;
+    max-width: 1440px;
     margin: auto;
     font-family: $fontroboto;
+        @media #{$pc}{
+            
+        }
 }
 h1{
     font-family: $fontshrikhand;

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*color*/
+/*font/police*/
+/*media queries*/
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -48,11 +51,10 @@ button {
 }
 
 body {
-  max-width: 375px;
+  max-width: 1440px;
   margin: auto;
   font-family: "Roboto";
 }
-
 h1 {
   font-family: "Shrikhand";
   font-size: 28px;
@@ -95,6 +97,10 @@ header {
   background-color: #EAEAEA;
 }
 
+.fa-arrow-left {
+  color: #000000;
+}
+
 .hero {
   display: flex;
   justify-content: center;
@@ -107,10 +113,10 @@ header {
   background-color: #F6F6F6;
 }
 .hero_title {
-  font-family: Shrikhand;
+  font-family: Roboto;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
 }
 .hero_txt {
   color: #353535;
@@ -124,11 +130,12 @@ header {
   width: 220px;
   height: 50px;
   border-radius: 50px;
-  box-shadow: 0px 0px 10px 5px rgba(208, 208, 208, 0.65);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .hero_btn:hover {
   opacity: 0.8;
-  box-shadow: 0px 0px 10px 8px rgba(208, 208, 208, 0.85);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
 }
 
 .fonctionnement {
@@ -137,10 +144,38 @@ header {
   flex-direction: column;
   gap: 26px;
 }
+@media only screen and (min-width: 576px) {
+  .fonctionnement {
+    margin: 40px 120px;
+  }
+}
+@media only screen and (min-width: 992) {
+  .fonctionnement {
+    margin: 25px 90px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .fonctionnement {
+    margin: 50px 180px;
+  }
+}
+.fonctionnement_general {
+  display: grid;
+  gap: 26px;
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement_general {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .fonctionnement_title {
   padding: 20px 0px 0px;
 }
 .fonctionnement_choice {
+  margin: auto;
+  width: 335px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,6 +186,21 @@ header {
   border-radius: 20px;
   box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
 }
+@media only screen and (min-width: 576px) {
+  .fonctionnement_choice {
+    width: 335px;
+  }
+}
+@media only screen and (min-width: 992) {
+  .fonctionnement_choice {
+    width: 322px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .fonctionnement_choice {
+    width: 322px;
+  }
+}
 .fonctionnement_choice i {
   font-size: 18px;
   color: gray;
@@ -159,6 +209,7 @@ header {
 }
 .fonctionnement_choice i:hover {
   color: #9356DC;
+  transition: all 0.3s ease;
 }
 .fonctionnement_chiffres {
   display: flex;
@@ -189,6 +240,34 @@ header {
 .restaurants {
   background-color: #F6F6F6;
   padding: 40px 20px 20px 20px;
+}
+@media only screen and (min-width: 768) {
+  .restaurants {
+    margin: 0 90px;
+  }
+}
+@media only screen and (min-width: 1200) {
+  .restaurants {
+    margin: 0 180px;
+  }
+}
+.restaurants_gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 576px) {
+  .restaurants_gallery {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .restaurants_gallery {
+    gap: 50px 100px;
+  }
 }
 .restaurants_title {
   font-weight: 800;
@@ -277,10 +356,10 @@ header {
   gap: 15px;
 }
 .menu_title {
-  font-family: Shrikhand;
+  font-family: Roboto;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-family: "Shrikhand";
   margin: 30px 17px 0px;
   display: flex;
@@ -356,14 +435,15 @@ hr {
   width: 220px;
   height: 50px;
   border-radius: 50px;
-  box-shadow: 0px 0px 10px 5px rgba(208, 208, 208, 0.65);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   width: 186px;
   margin: auto;
   font-weight: 500;
 }
 .btn:hover {
   opacity: 0.8;
-  box-shadow: 0px 0px 10px 8px rgba(208, 208, 208, 0.85);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
 }
 
 .btn-like i {
@@ -488,10 +568,10 @@ hr {
   gap: 7px;
 }
 .footer_title {
-  font-family: Shrikhand;
+  font-family: Roboto;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   font-family: "Shrikhand";
   font-weight: normal;
@@ -503,6 +583,15 @@ hr {
 }
 .footer i {
   font-size: small;
+}
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer a:hover {
+  color: #cccccc;
+  transition: all 0.3s ease;
 }
 
 .footer fa-utensils {
