@@ -59,36 +59,33 @@ button {
     z-index: -10;
   }
 }
-/*
-.loader_background{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    z-index: 10;
-    animation: loading-screen 2s linear ;
+.loader_background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 10;
+  animation: loading-screen 2s linear;
 }
-*/
+
 .loader {
   font-family: "Shrikhand";
   color: #ffffff;
-  background-color: #9356DC;
-  background-size: 120%;
+  background-color: #99E2D0;
   border-radius: 49% 100% 51% 36%/66% 36% 40% 100%;
   font-size: xx-large;
-  font-weight: 200;
-  /*position: fixed;
-      width: 50%;
-      height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      animation: 2s loading-screen linear ;
-  */
+  font-weight: 700;
+  position: fixed;
+  width: 1500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: 2s loading-screen linear;
 }
 
 .loader:after {
@@ -115,6 +112,10 @@ button {
     background-size: 100% auto;
   }
 }
+#ligne {
+  animation: 2s loading-screen linear;
+}
+
 body {
   max-width: 1440px;
   margin: auto;
