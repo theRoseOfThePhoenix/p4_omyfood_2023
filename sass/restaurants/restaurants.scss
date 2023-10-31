@@ -1,8 +1,21 @@
 .restaurants{
     background-color: $grey2;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px 20px 0px;
         @media only screen and (min-width: 1200px){
             padding: 40px 0px;
+        }
+        &_blocs{
+            margin: 30px 20px 50px 20px;
+            
+            @media only screen and (min-width: 576px){
+                margin: 40px 120px;
+            }
+            @media only screen and (min-width: 768px){
+            margin: 0px 120px;
+                }
+            @media only screen and (min-width: 1200px){
+            margin: 0px 180px;
+            }
         }
         &_gallery {
             display: flex;
@@ -15,18 +28,12 @@
                 gap: 25px 25px;
             }@media only screen and (min-width: 1200px){
                 gap: 50px 100px;
-                margin: 0px 180px;
             }
         }
     &_title{
-        font-weight: 800;
         margin: 10px 0 20px 0;
         @media only screen and (min-width: 1200px){
-            padding: 40px 0px;
-            margin-left: 27%;
-        }
-        @media only screen and (min-width: 768px){
-            margin-left: 17%;
+            margin: 0 0 30px 0;
         }
     }
     a{

@@ -50,6 +50,71 @@ button {
   border-style: unset;
 }
 
+@keyframes loading-screen {
+  0%, 85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+/*
+.loader_background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 10;
+    animation: loading-screen 2s linear ;
+}
+*/
+.loader {
+  font-family: "Shrikhand";
+  color: #ffffff;
+  background-color: #9356DC;
+  background-size: 120%;
+  border-radius: 49% 100% 51% 36%/66% 36% 40% 100%;
+  font-size: xx-large;
+  font-weight: 200;
+  /*position: fixed;
+      width: 50%;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      animation: 2s loading-screen linear ;
+  */
+}
+
+.loader:after {
+  content: "ohmyfood";
+  position: relative;
+  z-index: 5;
+}
+
+.loader:before {
+  content: "";
+  height: 13px;
+  border: 1.5px solid;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%) no-repeat;
+  background-size: 0% auto;
+  animation: 2s loading-screen linear;
+}
+
+@keyframes loading-screen {
+  to {
+    background-size: 100% auto;
+  }
+}
 body {
   max-width: 1440px;
   margin: auto;
@@ -184,7 +249,7 @@ header {
   height: 4.5em;
   background: #F6F6F6;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 @media only screen and (min-width: 576px) {
   .fonctionnement_choice {
@@ -239,11 +304,29 @@ header {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 40px 20px 20px 20px;
+  padding: 40px 20px 20px 0px;
 }
 @media only screen and (min-width: 1200px) {
   .restaurants {
     padding: 40px 0px;
+  }
+}
+.restaurants_blocs {
+  margin: 30px 20px 50px 20px;
+}
+@media only screen and (min-width: 576px) {
+  .restaurants_blocs {
+    margin: 40px 120px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .restaurants_blocs {
+    margin: 0px 120px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .restaurants_blocs {
+    margin: 0px 180px;
   }
 }
 .restaurants_gallery {
@@ -262,22 +345,14 @@ header {
 @media only screen and (min-width: 1200px) {
   .restaurants_gallery {
     gap: 50px 100px;
-    margin: 0px 180px;
   }
 }
 .restaurants_title {
-  font-weight: 800;
   margin: 10px 0 20px 0;
 }
 @media only screen and (min-width: 1200px) {
   .restaurants_title {
-    padding: 40px 0px;
-    margin-left: 27%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .restaurants_title {
-    margin-left: 17%;
+    margin: 0 0 30px 0;
   }
 }
 .restaurants a {
@@ -352,6 +427,14 @@ header {
   font-size: x-large;
 }
 
+@media only screen and (min-width: 1200px) {
+  .img-restaurant {
+    height: 485px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 #img-portrait {
   width: 100%;
   height: 275px;
@@ -366,6 +449,13 @@ header {
   padding-bottom: 30px;
   display: grid;
   gap: 15px;
+}
+@media only screen and (min-width: 1200px) {
+  .menu {
+    margin: -40px auto 0px;
+    width: 1055px;
+    justify-content: center;
+  }
 }
 .menu_title {
   font-family: Roboto;
@@ -409,6 +499,11 @@ hr {
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   position: relative;
+}
+@media only screen and (min-width: 1200px) {
+  .case {
+    width: 1055px;
+  }
 }
 .case_txt {
   white-space: nowrap; /*bloc le retour à la ligne*/
@@ -579,6 +674,13 @@ hr {
   display: grid;
   gap: 7px;
 }
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+  }
+}
 .footer_title {
   font-family: Roboto;
   font-size: 28px;
@@ -592,6 +694,13 @@ hr {
 .footer_txt {
   display: grid;
   gap: 7px;
+}
+@media only screen and (min-width: 768px) {
+  .footer_txt {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 .footer i {
   font-size: small;

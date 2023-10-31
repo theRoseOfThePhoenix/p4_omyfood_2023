@@ -1,0 +1,61 @@
+@keyframes loading-screen {
+    0%, 85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -10;
+        //background-size: 100% auto;
+    }
+}
+/*
+.loader_background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 10;
+    animation: loading-screen 2s linear ;
+}
+*/
+.loader{
+    font-family: $fontshrikhand;
+    color: $white;
+    background-color: $purple;
+    background-size: 120%;
+    border-radius: 49% 100% 51% 36% / 66% 36% 40% 100%;
+    font-size: xx-large;
+    font-weight: 200;
+    //position: relative;
+    /*position: fixed;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    animation: 2s loading-screen linear ;
+*/
+  }
+  .loader:after{
+    content: 'ohmyfood';
+    position: relative;
+    z-index: 5;
+  }
+  .loader:before{
+    content: '';
+    height: 13px;
+    border: 1.5px solid;
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: $gradient no-repeat;
+    background-size: 0% auto;
+    animation: 2s loading-screen linear ;
+  }
+
+  @keyframes loading-screen {to {  background-size: 100% auto}}
