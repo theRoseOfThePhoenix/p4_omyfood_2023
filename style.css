@@ -54,7 +54,7 @@ button {
   width: 100%;
   height: 100vh;
   position: fixed;
-  background-color: #ffffff;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@ button {
   width: 23px;
   height: 24px;
   border-radius: 100%;
-  border: 3px solid #000000;
+  border: 3px solid #ffffff;
   border-bottom-color: #89C8FA;
   box-sizing: border-box;
   animation: rotation 0.3s linear infinite; /*keyframes*/
@@ -119,10 +119,10 @@ button {
   width: 23px;
   height: 24px;
   border-radius: 100%;
-  border: 3px solid #000000;
-  border-bottom-color: #99E2D0;
+  border: 3px solid #ffffff;
+  border-bottom-color: #008766;
   box-sizing: border-box;
-  animation: rotation 0.5s linear infinite;
+  animation: rotation 1s linear infinite;
 }
 
 @keyframes rotation {
@@ -148,8 +148,8 @@ button {
   width: 23px;
   height: 24px;
   border-radius: 100%;
-  border: 3px solid #000000;
-  border-bottom-color: #9356DC;
+  border: 3px solid #ffffff;
+  border-bottom-color: #003A68;
   box-sizing: border-box;
   animation: rotation 0.8s linear infinite;
 }
@@ -166,12 +166,12 @@ button {
   font-size: 48px;
   font-family: shrikhand;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   display: inline-block;
   letter-spacing: 2px;
   position: relative;
   box-sizing: border-box;
-  animation: txtblur 1s ease-in infinite alternate;
+  animation: txtblur 1s ease-in-out infinite alternate;
 }
 
 @keyframes txtblur {
@@ -190,7 +190,7 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  color: #9356DC;
+  color: #003A68;
   width: 100%;
   height: 100%;
   overflow: hidden;
