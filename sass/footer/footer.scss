@@ -4,19 +4,28 @@
     color: $white;
     display: grid;
     gap: 7px;
+    align-items: center;
         @media only screen and (min-width: 768px){
             display: flex;
             flex-direction: row-reverse;
-            gap: 50px;
+            gap: 20px;
+            padding: 20px 20px;
     }
-            
-
+    @media only screen and (min-width: 1024px){
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
+        padding: 40px 50px 20px;
+}
     &_title{
         @include titre;
         font-size: 18px;
         font-family: $fontshrikhand;
         font-weight: normal;
-        padding-bottom: 9px;
+        padding-bottom: 16px;
+            @media only screen and (min-width: 768px){
+            padding-bottom: 0px;
+        }
     }
 
     &_txt{

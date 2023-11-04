@@ -19,6 +19,9 @@ header{
         border: hidden;
         background-color: $lighgrey;
     }
+    & i{
+        padding-right: 17px;
+    }
 }
  .fa-arrow-left{
     color: $black;

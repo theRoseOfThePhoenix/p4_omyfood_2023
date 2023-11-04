@@ -1,26 +1,47 @@
 
-.loader {
+.loader_background{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: $white;
+    @include flexmid;
+    z-index: 10;
+    left: 0;
+    animation: loading-screen 3000ms ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading-screen {
+    0%, 85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+        display: none;
+    }
+}
+
+.loader{
     display: inline-block;
     position: relative;
     z-index: 1;
     color:$black;
     animation: txtblur  1s ease-in infinite alternate;
-    
     &::before {
-        content: '';  
+        content: '';          
         position: absolute;
         left: 7px;
         bottom: 0px;
         width: 23px;
         height: 24px;
         border-radius: 100%;
-        border: 3px solid #000000;
+        border: 3px solid $black;
         border-bottom-color: $blue;
         box-sizing: border-box;
         animation: rotation 0.3s linear infinite;  /*keyframes*/
         
       }
-      
   }
   @keyframes rotation {
     0% {

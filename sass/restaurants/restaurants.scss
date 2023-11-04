@@ -1,21 +1,11 @@
-.restaurants{
+/*.restaurants{
     background-color: $grey2;
-    padding: 40px 20px 20px 0px;
-        @media only screen and (min-width: 1200px){
-            padding: 40px 0px;
+    padding: 20px 10px 20px 10px;
+        @media only screen and (min-width: 1024px){
+            padding: 40px 120px;
         }
-        &_blocs{
-            margin: 30px 20px 50px 20px;
-            
-            @media only screen and (min-width: 576px){
-                margin: 40px 120px;
-            }
-            @media only screen and (min-width: 768px){
-            margin: 0px 120px;
-                }
-            @media only screen and (min-width: 1200px){
-            margin: 0px 180px;
-            }
+        @media only screen and (min-width: 1440px){
+            padding: 40px 180px;
         }
         &_gallery {
             display: flex;
@@ -26,13 +16,13 @@
                 flex-direction: row;
                 justify-content: center;
                 gap: 25px 25px;
-            }@media only screen and (min-width: 1200px){
+            }@media only screen and (min-width: 1024px){
                 gap: 50px 100px;
             }
         }
     &_title{
-        margin: 10px 0 20px 0;
-        @media only screen and (min-width: 1200px){
+        margin: 10px 0 20px 10px;
+        @media only screen and (min-width: 1024px){
             margin: 0 0 30px 0;
         }
     }
@@ -43,7 +33,7 @@
 }
 .card{
     width: 340px;
-    height: 251px;
+    height: 250px;
     position: relative;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -51,19 +41,30 @@
     box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
 
     @media only screen and (min-width: 768px){
-        width: 490px;
+        width: 460px;
         }
+        @media only screen and (min-width: 1024px){
+            width: 490px;
+            }
+
+    &_logo{
+        position: absolute;
+        right: 20px;
+        bottom: 25px;
+    }
     &_nouveau{
         @include nouveau;
     }
     &_img{
-        width: 100%;
-        object-fit: cover;
         height: 172px;
         overflow: hidden;
         border-radius: 20px 20px 0 0;
         display: flex;
         position: relative;
+    }
+    &_img img{
+        width: 100%;
+        object-fit: cover;
     }
     &_txt{
         display: flex;
@@ -78,5 +79,89 @@
     }
     i ,fa-regular fa-heart{
         font-size: 33px;
+    }
+}*/
+.restaurants {
+    background-color: $grey2;
+    padding: 40px 20px 50px 20px;
+        @media only screen and (min-width: 1024px){
+        padding: 40px 30px 0px 30px;
+        }
+        @media only screen and (min-width: 1440px){
+            padding: 40px 180px 0px 180px;
+            justify-content: space-between;
+            }
+    &_gallery{
+        @media only screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        }
+        @media only screen and (min-width: 1440px){
+            justify-content: space-between;
+            }
+    }
+    h2 {
+        font-weight: 800;
+        margin: 10px 0 20px 0;
+    }
+}
+.card {
+    height: 250px;
+    max-width: 460px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+        @media only screen and (min-width: 768px){
+            width: 490px;
+    }
+    @media only screen and (min-width: 1024px){
+        margin-bottom: 50px;        
+        }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    &_nouveau{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #99E2D0;
+        padding: 7px 12px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #218a70;
+        border-radius: 4px;
+    }
+    &_img {
+        height: 172px;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        img {
+            width: 100%;
+            object-fit: cover;   
+        }
+    }
+    &_txt{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        align-items: center;
+    }
+    .card_title h3{
+        @include titre2;
+        font-size: 18px;
+        padding-bottom: 8px;
+    }
+    i ,fa-regular fa-heart{
+        font-size: 33px;
+    }
+    &_logo {
+        position: absolute;
+        right: 20px;
+        bottom: 25px;
     }
 }

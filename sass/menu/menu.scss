@@ -26,13 +26,14 @@
     border-radius: 50px 50px 0 0;
     position: relative;
     margin-top: -40px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     display: grid;
     gap: 15px;
-        @media only screen and (min-width: 1200px){        
+    justify-content: center;
+        @media only screen and (min-width: 768px){        
         margin: -40px auto 0px;
-        width: 1055px;
         justify-content: center;
+        max-width: 1055px;
     }
     &_title{
         @include titre;
@@ -40,25 +41,28 @@
         margin: 30px 17px 0px;
         @include flexmid;
         justify-content: space-between;
+            @media only screen and (min-width: 768px){ 
+            margin: 50px 17px 0px;
+        }
     }
 }
 .bloc{
-    display: grid;
-    gap: 12px;
     margin: 15px;
     overflow: hidden; /*pour la visibiliter du chek*/
 
     &_title{
         @include typo2;
         text-transform: uppercase;
+        margin-bottom: 4px;
     }
 }
 hr{
     width: 40px;
     border: solid 2px $green;
+    margin-bottom: 12px;
 }
 .case{
-    max-width: 345px;
+    max-width: 634px;
     display: flex;
     align-items: end;
     padding: 15px;
@@ -67,6 +71,7 @@ hr{
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
     justify-content: space-between;
     position: relative;
+    margin-bottom: 12px;
         @media only screen and (min-width: 1200px){        
         width: 1055px;
     }
