@@ -570,6 +570,16 @@ header {
   bottom: 25px;
 }
 
+header {
+  position: relative;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+}
+
 .tete-menu {
   display: flex;
   flex-direction: row;
