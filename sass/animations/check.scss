@@ -15,13 +15,13 @@
     right: -60px;
     height: 70px;
     width: 58px;
-    background-color: #99E2D0;
+    background-color:$green;
     @include flexmid;
     border-radius: 0 15px 15px 0;
     transition: transform 350ms ease-in-out; /*transition apelle le transforme case:hover*/
 }
 .fa-circle-check {
-    color: white;
+    color:$white;
     font-size: 22px;
     transition: transform 350ms 100ms ease-in-out;
 }

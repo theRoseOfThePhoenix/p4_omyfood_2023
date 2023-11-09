@@ -18,8 +18,12 @@
         font-size: 18px;
 }
     &_btn{
-        @include btn
+        @include btn;
 }
+    &_btn a{
+        text-decoration : none;
+        color: $white;
+    }
 }
 
 

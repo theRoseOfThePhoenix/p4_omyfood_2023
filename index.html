@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Oh My Food</title>
     <!--favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="asset/Images et textes Ohmyfood/images/logo/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/asset/Images et textes Ohmyfood/images/logo/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="asset/Images et textes Ohmyfood/images/logo/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="asset/Images_et_textes_Ohmyfood/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/asset/Images_et_textes_Ohmyfood/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/Images_et_textes_Ohmyfood/images/logo/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <!--icone-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,21 +39,20 @@
                 <h1 class="logo_title">ohmyfood</h1>
             </div>
                    <!--localisation-->
-        <section class="location">
+        <div class="location">
             <form method="post" action="localisation" class="location_form">
                 <i class="fa-solid fa-location-dot"></i>
                 <label for="search-bar"></label>
                 <input class="location_search-bar" id="search-bar" name="villes" placeholder="Paris, Belleville"> 
             </form>
-        </section>
+        </div>
     </header>
-        
         <main>
             <!--hero-->
             <section class="hero">
                 <h2 class="hero_title">Réservez le menu qui vous convient</h2>
-                <p class="hero_txt">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-               <a href="#restaurants"><button class="hero_btn">Explorez nos restaurants</button></a>
+                    <p class="hero_txt">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                        <button class="hero_btn">Explorez nos restaurants</button>
             </section>
 
             <!--fonctionnement-->
@@ -84,7 +83,6 @@
                     </div>
                 </div>          
                 </section>
-
             <!--restaurant-->
         <section id="restaurants" class="restaurants"> 
             <!--titre -->
@@ -97,7 +95,7 @@
                                     <p>Nouveau</p>
                                 </div> <!--mixin nouveau-->
                                 <div class="card_img">
-                                    <img src="asset/Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                                    <img alt="photo du restaurant la palette du gout" src="asset/Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
                                 </div>
                                 <div class="card_txt">
                                     <div class="card_title"><h3>La palette du goût</h3>
@@ -106,9 +104,11 @@
                                 </div>
                              </a>
                              <div class="card_logo">
-                                <button class="btn-like btn--mr">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+                                <input class="checkbox" type="checkbox" id="checkheart--1">
+                                <label class="checkbox-label--1" for="checkheart--1">
+                                    <i class="fa-solid fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>   
                         </div>                    
                         <div class="card">
@@ -117,7 +117,7 @@
                                 <p>Nouveau</p>
                             </div> <!--mixin nouveau-->
                             <div class="card_img">
-                                <img class="card_img" src="asset/Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                                <img class="card_img" alt="photo du restaurant la note enchantée" src="asset/Images_et_textes_Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
                             </div>
                                 <div class="card_txt">
                                     <div class="card_title"><h3>La note enchantée</h3>
@@ -126,15 +126,17 @@
                             </div>
                             </a>
                             <div class="card_logo">
-                                <button class="btn-like btn--mr">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+                               <input class="checkbox" type="checkbox" id="checkheart--2">
+                                <label class="checkbox-label--2" for="checkheart--2">
+                                    <i class="fa-solid fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>   
                         </div>
                         <div class="card">
                             <a href="restaurants/a_la_francaise.html">
                             <div class="card_img">
-                                <img class="card_img" src="asset/Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                                <img class="card_img" alt="photo du restaurant à la française" src="asset/Images_et_textes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
                             </div>
                                 <div class="card_txt">
                                     <div class="card_title"><h3>À la française</h3>
@@ -143,25 +145,30 @@
                             </div>
                             </a>
                             <div class="card_logo">
-                                <button class="btn-like btn--mr">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+                               <input class="checkbox" type="checkbox" id="checkheart--3">
+                                <label class="checkbox-label--3" for="checkheart--3">
+                                    <i class="fa-solid fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>   
                             </div>
                         <div class="card">
                             <a href="restaurants/le_delice_des_sens.html">
                                 <div class="card_img">
-                                    <img class="card_img" src="asset/Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+                                    <img class="card_img" alt="photo du restaurant le délice des sens" src="asset/Images_et_textes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
                                 </div>
                                 <div class="card_txt">
                                     <div class="card_title"><h3>Le délice des sens</h3>
                                     <p>Folie-Méricourt</p>
+                                    </div>
                                 </div>
                             </a>
                             <div class="card_logo">
-                                <button class="btn-like btn--mr">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+                               <input class="checkbox" type="checkbox" id="checkheart--4">
+                                <label class="checkbox-label--4" for="checkheart--4">
+                                    <i class="fa-solid fa-heart empty"></i>
+                                    <i class="fa-solid fa-heart full"></i>
+                                </label>
                             </div>   
                         </div>
                 </div>

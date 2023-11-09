@@ -96,6 +96,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        gap: 25px;
         }
         @media only screen and (min-width: 1440px){
             justify-content: space-between;
@@ -157,7 +158,7 @@
         padding-bottom: 8px;
     }
     i ,fa-regular fa-heart{
-        font-size: 33px;
+        font-size: 24px;
     }
     &_logo {
         position: absolute;

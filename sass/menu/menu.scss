@@ -36,7 +36,6 @@ header{
     padding-bottom: 50px;
     display: grid;
     gap: 15px;
-    justify-content: center;
         @media only screen and (min-width: 768px){        
         margin: -40px auto 0px;
         justify-content: center;
@@ -48,6 +47,9 @@ header{
         margin: 30px 17px 0px;
         @include flexmid;
         justify-content: space-between;
+        i ,fa-regular fa-heart{
+            font-size: 24px;
+        }
             @media only screen and (min-width: 768px){ 
             margin: 50px 17px 0px;
         }

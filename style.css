@@ -207,7 +207,6 @@ button {
   }
 }
 body {
-  max-width: 1440px;
   margin: auto;
   font-family: "Roboto";
 }
@@ -307,6 +306,10 @@ header {
   opacity: 0.8;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   transition: all 0.3s ease;
+}
+.hero_btn a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .fonctionnement {
@@ -492,6 +495,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 25px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -562,7 +566,7 @@ header {
   padding-bottom: 8px;
 }
 .card i, .card fa-regular fa-heart {
-  font-size: 33px;
+  font-size: 24px;
 }
 .card_logo {
   position: absolute;
@@ -614,7 +618,6 @@ header {
   padding-bottom: 50px;
   display: grid;
   gap: 15px;
-  justify-content: center;
 }
 @media only screen and (min-width: 768px) {
   .menu {
@@ -635,6 +638,9 @@ header {
   align-items: center;
   text-align: center;
   justify-content: space-between;
+}
+.menu_title i, .menu_title fa-regular fa-heart {
+  font-size: 24px;
 }
 @media only screen and (min-width: 768px) {
   .menu_title {
@@ -725,44 +731,150 @@ hr {
   transition: all 0.3s ease;
 }
 
-.btn-like i {
-  font-size: 1.5625rem;
+.empty {
+  transform: translateX(28px);
+  opacity: 1;
+  background-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-fill-color: transparent;
+}
+.empty:hover {
+  opacity: 0;
+}
+.empty:hover + .full {
+  transform: scale(1);
 }
 
-.btn-like i:hover {
-  font-weight: 700;
-  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+.full {
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: transform 400ms ease-in-out;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: transparent;
+}
+
+.checkbox {
+  display: none;
+}
+
+/*
+input[type="checkbox"] + .checkbox-label i::after {
+	content: '\f004';
+	transform: scale(2);
+}
+
+input[type="checkbox"] + .checkbox-label i::before {
+	content: '';
+	transform: scale(2);
+}
+*/
+.checkbox + .checkbox-label--1::before {
+  content: "\f004";
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -moz-background-clip: text; /*mozilla le fond ne dépasse pas des lignes */
-  animation: full-heart 900ms ease-in-out both;
 }
 
-.btn-like {
-  background-color: transparent;
+.checkbox:checked + .checkbox-label--1 i::before {
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  overflow: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  -webkit-text-stroke-color: #9356DC;
 }
 
-@keyframes full-heart {
-  0% {
-    opacity: 0.1;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0.7;
-  }
-  60% {
-    opacity: 0.8;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
+.checkbox + .checkbox-label--2::before {
+  content: "\f004";
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.checkbox:checked + .checkbox-label--2 i::before {
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  overflow: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  -webkit-text-stroke-color: #9356DC;
+}
+
+.checkbox + .checkbox-label--3::before {
+  content: "\f004";
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.checkbox:checked + .checkbox-label--3 i::before {
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  overflow: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  -webkit-text-stroke-color: #9356DC;
+}
+
+.checkbox + .checkbox-label--4::before {
+  content: "\f004";
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.checkbox:checked + .checkbox-label--4 i::before {
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  overflow: hidden;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  -webkit-text-stroke-color: #9356DC;
+}
+
+/*
+.icon_wrapper {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    overflow: hidden;
+    align-self: center;
+	position: relative;
+    height: 25px;
+    width: 27px;
+    border-radius: 0;
+    background-color: transparent;
+}
+.icon_wrapper-heart {
+	position: relative;
+    height: 25px;
+    width: 27px;
+    border-radius: 0;
+    background-color: transparent;
+}
+.icon_wrapper-heart:hover
+.icon_heart {
+	padding: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.icon_heart-full {
+	ckground: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    z-index: 50;
+}
+.icon_heart-empty {
+	ackground: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    z-index: 100;
+}
+*/
 @keyframes case-animation {
   from {
     transform: translateY(20px);
@@ -834,7 +946,7 @@ hr {
 }
 
 .fa-circle-check {
-  color: white;
+  color: #ffffff;
   font-size: 22px;
   transition: transform 350ms 100ms ease-in-out;
 }
