@@ -71,7 +71,7 @@ hr{
     margin-bottom: 12px;
 }
 .case{
-    max-width: 634px;
+    max-width: 740px;
     display: flex;
     align-items: end;
     padding: 15px;
@@ -81,7 +81,10 @@ hr{
     justify-content: space-between;
     position: relative;
     margin-bottom: 12px;
-        @media only screen and (min-width: 1200px){        
+        @media only screen and (min-width: 768px){        
+            width: 740px;
+        }
+        @media only screen and (min-width: 1024px){        
         width: 1055px;
     }
         &_txt{
