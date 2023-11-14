@@ -50,6 +50,29 @@ button {
   border-style: unset;
 }
 
+body {
+  margin: auto;
+  font-family: "Roboto";
+}
+h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+  margin: 13px 75px;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.main {
+  display: grid;
+  gap: 30px;
+}
+
 .loader_background {
   width: 100%;
   height: 100vh;
@@ -206,29 +229,6 @@ button {
     height: 0%;
   }
 }
-body {
-  margin: auto;
-  font-family: "Roboto";
-}
-h1 {
-  font-family: "Shrikhand";
-  font-size: 28px;
-  font-weight: 400;
-  margin: 13px 75px;
-}
-
-h2 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.main {
-  display: grid;
-  gap: 30px;
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -756,6 +756,73 @@ hr {
   transition: all 0.3s ease;
 }
 
+.footer {
+  padding: 25px 22px;
+  background-color: #353535;
+  color: #ffffff;
+  display: grid;
+  gap: 7px;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding: 20px 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    padding: 40px 50px 20px;
+  }
+}
+.footer_title {
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Shrikhand";
+  font-weight: normal;
+  padding-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .footer_title {
+    padding-bottom: 0px;
+  }
+}
+.footer_txt {
+  display: grid;
+  gap: 7px;
+}
+@media only screen and (min-width: 768px) {
+  .footer_txt {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.footer i {
+  font-size: small;
+}
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footer a:hover {
+  color: #cccccc;
+  transition: all 0.3s ease;
+}
+
+.footer fa-utensils {
+  padding-right: 5px;
+}
+
 .empty {
   transform: translateX(28px);
   opacity: 1;
@@ -974,73 +1041,6 @@ input[type="checkbox"] + .checkbox-label i::before {
   color: #ffffff;
   font-size: 22px;
   transition: transform 350ms 100ms ease-in-out;
-}
-
-.footer {
-  padding: 25px 22px;
-  background-color: #353535;
-  color: #ffffff;
-  display: grid;
-  gap: 7px;
-  align-items: center;
-}
-@media only screen and (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 20px;
-    padding: 20px 20px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 50px;
-    padding: 40px 50px 20px;
-  }
-}
-.footer_title {
-  font-family: Roboto;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  font-family: "Shrikhand";
-  font-weight: normal;
-  padding-bottom: 16px;
-}
-@media only screen and (min-width: 768px) {
-  .footer_title {
-    padding-bottom: 0px;
-  }
-}
-.footer_txt {
-  display: grid;
-  gap: 7px;
-}
-@media only screen and (min-width: 768px) {
-  .footer_txt {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-}
-.footer i {
-  font-size: small;
-}
-.footer a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-.footer a:hover {
-  color: #cccccc;
-  transition: all 0.3s ease;
-}
-
-.footer fa-utensils {
-  padding-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
