@@ -45,13 +45,28 @@ header{
         @include titre;
         font-family: $fontshrikhand;
         margin: 30px 17px 0px;
-        @include flexmid;
-        justify-content: space-between;
+        label{
+            position: absolute;
+            right: 32px;
+            @media only screen and (min-width: 768px){ 
+                right: 140px;
+            }
+                @media only screen and (min-width: 1024px){ 
+                position: initial;
+            }
+        }
         i ,fa-regular fa-heart{
             font-size: 24px;
         }
+            @media only screen and (max-width: 374px){ 
+                @include titre2;
+        }
             @media only screen and (min-width: 768px){ 
             margin: 50px 17px 0px;
+        }
+        @media only screen and (min-width: 1024px){ 
+            @include flexmid;
+            justify-content: center;
         }
     }
 }
@@ -67,7 +82,7 @@ header{
 }
 hr{
     width: 40px;
-    border: solid 2px $green;
+    border: solid 1.5px $green;
     margin-bottom: 12px;
 }
 .case{
@@ -86,7 +101,7 @@ hr{
         }
         @media only screen and (min-width: 1024px){        
         width: 1055px;
-    }
+        }
         &_txt{
             white-space: nowrap; /*bloc le retour à la ligne*/
             overflow: hidden; /*cacher squi dépasse*/

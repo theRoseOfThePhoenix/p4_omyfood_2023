@@ -27,21 +27,20 @@
     position: relative;
     z-index: 1;
     color:$black;
-    animation: txtblur  1s ease-in infinite alternate;
-    &::before {
-        content: '';          
-        position: absolute;
-        left: 7px;
-        bottom: 0px;
-        width: 23px;
-        height: 24px;
-        border-radius: 100%;
-        border: 3px solid $white;
-        border-bottom-color: $blue;
-        box-sizing: border-box;
-        animation: rotation 0.3s linear infinite;  /*keyframes*/
-        
-      }
+    animation: txtblur  0.3s ease-in infinite alternate;
+      &::before {
+          content: '';          
+          position: absolute;
+          left: 7px;
+          bottom: 0px;
+          width: 23px;
+          height: 24px;
+          border-radius: 100%;
+          border: 3px solid $white;
+          border-bottom-color: $blue;
+          box-sizing: border-box;
+          animation: rotation 1s linear infinite;  /*keyframes*/
+        }
   }
   @keyframes rotation {
     0% {
@@ -56,7 +55,7 @@
     display: inline-block;
     position: relative;
     z-index: 200;
-    animation: txtblur 1s ease-in infinite alternate;
+    animation: txtblur 0.3s ease-in infinite alternate;
   }
   
   .loader1::before {
@@ -70,7 +69,7 @@
     border: 3px solid $white;
     border-bottom-color: $dark-green;
     box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+    animation: rotation 2s linear infinite;
   }
   
   @keyframes rotation {
@@ -86,7 +85,7 @@
     display: inline-block;
     position: relative;
     z-index: 2;
-    animation: txtblur  1s ease-in infinite alternate;
+    animation: txtblur 0.3s ease-in infinite alternate;
   }
   
   .loader2::before {
@@ -100,7 +99,7 @@
     border: 3px solid $white;
     border-bottom-color: $dark-blue;
     box-sizing: border-box;
-    animation: rotation 0.8s linear infinite;
+    animation: rotation 3s linear infinite;
   }
   
   @keyframes rotation {
@@ -120,7 +119,7 @@
     letter-spacing: 2px;
     position: relative;
     box-sizing: border-box;
-    animation: txtblur  1s ease-in-out infinite alternate;
+    animation: txtblur 0.3s ease-out infinite alternate, animloader 3s ease-in; 
   }
   @keyframes txtblur {
     0% {
@@ -128,8 +127,22 @@
       transform: skew(0deg);
     }
     100% {
-      filter: blur(5px);
-      transform: skew(-4deg);
+      filter: blur(2px);
+      transform: skew(-6deg);
+    }
+  }
+  @keyframes animloader {
+    100% {
+      height: 0%;
+    }
+    70% {
+      height: 20%;
+    }
+    30% {
+      height: 50%;
+    }
+    0% {
+      height: 100%;
     }
   }
   .txt::after {
@@ -143,14 +156,5 @@
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    animation: animloader 6s linear infinite;
-  }
-  
-  @keyframes animloader {
-    0% {
-      height: 100%;
-    }
-    100% {
-      height: 0%;
-    }
+    animation: animloader 3s ease-in; 
   }

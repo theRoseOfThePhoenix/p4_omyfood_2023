@@ -1,42 +1,30 @@
 .empty {
-    transform: translateX(28px);
+    transform: translateX(1.2em);
     opacity: 1;
 	background-color: transparent;
-	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $black;
 	-webkit-text-fill-color: transparent;
-    &:hover{
-		//transform: scale(0) ;
-        opacity: 0;
-    }
-    &:hover+.full{
-        transform: scale(1);
-    }
+		&:hover{
+			opacity: 0;
+		}
+		&:hover+.full{
+			transform: scale(1); /*Remplissage du coeur à l'echelle*/
+		}
 }
 .full {
-    transform: scale(0);
-    transform-origin: bottom;
-    transition: transform 400ms ease-in-out;
-    background: $gradient;
-    -webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	-webkit-text-stroke-color: transparent;
+    transform: scale(0); /* Coeur vide*/
+    transform-origin: bottom; /*part du bas*/
+    transition: transform 400ms ease-in-out; /*Effect de la courbe de progression dans l'animation. */
+    background: $gradient; 
+    -webkit-text-fill-color: transparent; /*pour le fond noir*/
+	-webkit-background-clip: text; /*pour le gradient fasse bien la forme coeur*/
+	/*-webkit-text-stroke-color: transparent;*/
 }
 
 .checkbox {
 	display: none;
 }
-/*
-input[type="checkbox"] + .checkbox-label i::after {
-	content: '\f004';
-	transform: scale(2);
-}
-
-input[type="checkbox"] + .checkbox-label i::before {
-	content: '';
-	transform: scale(2);
-}
-*/
 .checkbox+ .checkbox-label--1::before{
 	content: '\f004';
 	-webkit-background-clip: text;
@@ -90,48 +78,3 @@ input[type="checkbox"] + .checkbox-label i::before {
 	font-size: 1em;
 	-webkit-text-stroke-color: $purple;
 }	
-
-/*
-.icon_wrapper {
-	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    overflow: hidden;
-    align-self: center;
-	position: relative;
-    height: 25px;
-    width: 27px;
-    border-radius: 0;
-    background-color: transparent;
-}
-.icon_wrapper-heart {
-	position: relative;
-    height: 25px;
-    width: 27px;
-    border-radius: 0;
-    background-color: transparent;
-}
-.icon_wrapper-heart:hover
-.icon_heart {
-	padding: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.icon_heart-full {
-	ckground: linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow: hidden;
-    z-index: 50;
-}
-.icon_heart-empty {
-	ackground: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    z-index: 100;
-}
-*/

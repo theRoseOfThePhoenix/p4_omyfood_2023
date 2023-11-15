@@ -1,6 +1,6 @@
 @keyframes case-animation {
     from {
-        transform: translateY(20px);
+        transform: translateY(20px); /*animation du haut ver le bas*/
         opacity: 0;
     }
     to {
@@ -9,11 +9,14 @@
     }
 }
 .case {
-    animation: case-animation 600ms 100ms ease-in-out;
-    animation-fill-mode: both;
-    @for $i from 1 through 9 {
-        &--#{$i} {
-            animation-delay: 250ms * $i;
+    animation: case-animation 600ms 100ms ease-in-out; 
+    animation-fill-mode: both; /*les propriétés de style doivent être appliquées à la fois avant et après l'animation.*/
+        @for $i from 1 through 9 { /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+            &--#{$i} {  /* #{$i} est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
+                animation-delay: 250ms * $i; 
+                /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+                car il est proportionnel à la valeur de la variable $i. 
+                Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
+            }
         }
     }
-}

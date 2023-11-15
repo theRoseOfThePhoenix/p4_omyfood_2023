@@ -103,7 +103,7 @@ h2 {
   position: relative;
   z-index: 1;
   color: #000000;
-  animation: txtblur 1s ease-in infinite alternate;
+  animation: txtblur 0.3s ease-in infinite alternate;
 }
 .loader::before {
   content: "";
@@ -116,7 +116,7 @@ h2 {
   border: 3px solid #ffffff;
   border-bottom-color: #89C8FA;
   box-sizing: border-box;
-  animation: rotation 0.3s linear infinite; /*keyframes*/
+  animation: rotation 1s linear infinite; /*keyframes*/
 }
 
 @keyframes rotation {
@@ -131,7 +131,7 @@ h2 {
   display: inline-block;
   position: relative;
   z-index: 200;
-  animation: txtblur 1s ease-in infinite alternate;
+  animation: txtblur 0.3s ease-in infinite alternate;
 }
 
 .loader1::before {
@@ -145,7 +145,7 @@ h2 {
   border: 3px solid #ffffff;
   border-bottom-color: #008766;
   box-sizing: border-box;
-  animation: rotation 1s linear infinite;
+  animation: rotation 2s linear infinite;
 }
 
 @keyframes rotation {
@@ -160,7 +160,7 @@ h2 {
   display: inline-block;
   position: relative;
   z-index: 2;
-  animation: txtblur 1s ease-in infinite alternate;
+  animation: txtblur 0.3s ease-in infinite alternate;
 }
 
 .loader2::before {
@@ -174,7 +174,7 @@ h2 {
   border: 3px solid #ffffff;
   border-bottom-color: #003A68;
   box-sizing: border-box;
-  animation: rotation 0.8s linear infinite;
+  animation: rotation 3s linear infinite;
 }
 
 @keyframes rotation {
@@ -194,7 +194,7 @@ h2 {
   letter-spacing: 2px;
   position: relative;
   box-sizing: border-box;
-  animation: txtblur 1s ease-in-out infinite alternate;
+  animation: txtblur 0.3s ease-out infinite alternate, animloader 3s ease-in;
 }
 
 @keyframes txtblur {
@@ -203,8 +203,22 @@ h2 {
     transform: skew(0deg);
   }
   100% {
-    filter: blur(5px);
-    transform: skew(-4deg);
+    filter: blur(2px);
+    transform: skew(-6deg);
+  }
+}
+@keyframes animloader {
+  100% {
+    height: 0%;
+  }
+  70% {
+    height: 20%;
+  }
+  30% {
+    height: 50%;
+  }
+  0% {
+    height: 100%;
   }
 }
 .txt::after {
@@ -218,17 +232,9 @@ h2 {
   height: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  animation: animloader 6s linear infinite;
+  animation: animloader 3s ease-in;
 }
 
-@keyframes animloader {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
 header {
   display: flex;
   justify-content: center;
@@ -369,8 +375,13 @@ header {
 .fonctionnement_choice i {
   font-size: 18px;
   color: gray;
-  position: absolute;
-  left: 35px;
+}
+@media screen and (min-width: 375px) {
+  .fonctionnement_choice i {
+    width: 290px;
+    position: absolute;
+    left: 35px;
+  }
 }
 .fonctionnement_choice i:hover {
   color: #9356DC;
@@ -384,6 +395,7 @@ header {
   background-color: #9356DC;
   color: #ffffff;
   font-weight: 400;
+  font-size: 14px;
   height: 24px;
   width: 24px;
   border-radius: 50px;
@@ -535,7 +547,11 @@ header {
   margin-bottom: 20px;
   background-color: white;
   position: relative;
-  box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+}
+@media only screen and (max-width: 374px) {
+  .card {
+    width: 300px; /*intermediare small mobil*/
+  }
 }
 @media only screen and (min-width: 550px) {
   .card {
@@ -586,7 +602,7 @@ header {
   padding-bottom: 8px;
 }
 .card i, .card fa-regular fa-heart {
-  font-size: 24px;
+  font-size: 22px;
 }
 .card_logo {
   position: absolute;
@@ -653,18 +669,43 @@ header {
   font-weight: 700;
   font-family: "Shrikhand";
   margin: 30px 17px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
+}
+.menu_title label {
+  position: absolute;
+  right: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .menu_title label {
+    right: 140px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .menu_title label {
+    position: initial;
+  }
 }
 .menu_title i, .menu_title fa-regular fa-heart {
   font-size: 24px;
 }
+@media only screen and (max-width: 374px) {
+  .menu_title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+  }
+}
 @media only screen and (min-width: 768px) {
   .menu_title {
     margin: 50px 17px 0px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .menu_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -682,7 +723,7 @@ header {
 
 hr {
   width: 40px;
-  border: solid 2px #99E2D0;
+  border: solid 1.5px #99E2D0;
   margin-bottom: 12px;
 }
 
@@ -808,6 +849,7 @@ hr {
 }
 .footer i {
   font-size: small;
+  margin: 0 7px 0 0;
 }
 .footer a {
   color: inherit;
@@ -824,10 +866,10 @@ hr {
 }
 
 .empty {
-  transform: translateX(28px);
+  transform: translateX(1.2em);
   opacity: 1;
   background-color: transparent;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
   -webkit-text-fill-color: transparent;
 }
@@ -835,34 +877,23 @@ hr {
   opacity: 0;
 }
 .empty:hover + .full {
-  transform: scale(1);
+  transform: scale(1); /*Remplissage du coeur à l'echelle*/
 }
 
 .full {
-  transform: scale(0);
-  transform-origin: bottom;
-  transition: transform 400ms ease-in-out;
+  transform: scale(0); /* Coeur vide*/
+  transform-origin: bottom; /*part du bas*/
+  transition: transform 400ms ease-in-out; /*Effect de la courbe de progression dans l'animation. */
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-stroke-color: transparent;
+  -webkit-text-fill-color: transparent; /*pour le fond noir*/
+  -webkit-background-clip: text; /*pour le gradient fasse bien la forme coeur*/
+  /*-webkit-text-stroke-color: transparent;*/
 }
 
 .checkbox {
   display: none;
 }
 
-/*
-input[type="checkbox"] + .checkbox-label i::after {
-	content: '\f004';
-	transform: scale(2);
-}
-
-input[type="checkbox"] + .checkbox-label i::before {
-	content: '';
-	transform: scale(2);
-}
-*/
 .checkbox + .checkbox-label--1::before {
   content: "\f004";
   -webkit-background-clip: text;
@@ -923,53 +954,9 @@ input[type="checkbox"] + .checkbox-label i::before {
   -webkit-text-stroke-color: #9356DC;
 }
 
-/*
-.icon_wrapper {
-	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    overflow: hidden;
-    align-self: center;
-	position: relative;
-    height: 25px;
-    width: 27px;
-    border-radius: 0;
-    background-color: transparent;
-}
-.icon_wrapper-heart {
-	position: relative;
-    height: 25px;
-    width: 27px;
-    border-radius: 0;
-    background-color: transparent;
-}
-.icon_wrapper-heart:hover
-.icon_heart {
-	padding: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.icon_heart-full {
-	ckground: linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow: hidden;
-    z-index: 50;
-}
-.icon_heart-empty {
-	ackground: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    z-index: 100;
-}
-*/
 @keyframes case-animation {
   from {
-    transform: translateY(20px);
+    transform: translateY(20px); /*animation du haut ver le bas*/
     opacity: 0;
   }
   to {
@@ -979,34 +966,70 @@ input[type="checkbox"] + .checkbox-label i::before {
 }
 .case {
   animation: case-animation 600ms 100ms ease-in-out;
-  animation-fill-mode: both;
+  animation-fill-mode: both; /*les propriétés de style doivent être appliquées à la fois avant et après l'animation.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
+  /*Boucle 1 à 9. Variable $i prend successivement les valeurs de 1 à 9.*/
 }
-.case--1 {
+.case--1 { /* 1 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 250ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--2 {
+.case--2 { /* 2 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 500ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--3 {
+.case--3 { /* 3 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 750ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--4 {
+.case--4 { /* 4 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 1000ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--5 {
+.case--5 { /* 5 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 1250ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--6 {
+.case--6 { /* 6 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 1500ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--7 {
+.case--7 { /* 7 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 1750ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--8 {
+.case--8 { /* 8 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 2000ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
-.case--9 {
+.case--9 { /* 9 est une interpolation de la variable $i. Cela générera des sélecteurs ".case--1", ".case--2", ..., ".case--9".*/
   animation-delay: 2250ms;
+  /*Cela définit le délai d'animation pour chaque itération qui augmente à chaque itération, 
+  car il est proportionnel à la valeur de la variable $i. 
+  Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
 
 .case:hover .case_price {
@@ -1027,7 +1050,7 @@ input[type="checkbox"] + .checkbox-label i::before {
   bottom: 0px;
   right: -60px;
   height: 70px;
-  width: 58px;
+  width: 56px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;

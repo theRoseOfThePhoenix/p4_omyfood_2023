@@ -40,12 +40,15 @@
         @media screen and (min-width: 1024px){
             width: 290px;
         }
-        i{
+        i{ 
             font-size: 18px;
-            color: gray;    
-            position: absolute;
-            left: 35px;
+            color: gray;   
+                @media screen and (min-width: 375px){
+                width: 290px;
+                position: absolute;
+                left: 35px;
         }
+    }
         i:hover{
             color: $purple;
             transition: all 0.3s ease;
@@ -56,6 +59,7 @@
         background-color: $purple;
         color: $white;
         font-weight: 400;
+        font-size: 14px;
         height: 24px;
         width: 24px;
         border-radius: 50px;
