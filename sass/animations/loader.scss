@@ -1,12 +1,11 @@
 
 .loader_background{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background: $gradient;
     @include flexmid;
     z-index: 10;
-    left: 0;
     animation: loading-screen 3000ms ease-in;
     animation-fill-mode: forwards;
 }

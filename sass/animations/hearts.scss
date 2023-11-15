@@ -1,27 +1,32 @@
 .empty {
-    transform: translateX(1.2em);
-    opacity: 1;
-	background-color: transparent;
-	-webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: $black;
-	-webkit-text-fill-color: transparent;
+    transform: translateX(1.2em); /*Déplace l'icône de cœur vide horizontalement de 1.2em.*/
+    opacity: 1; /*icone opaque*/
+	background-color: transparent; 
+	-webkit-text-stroke-width: 1px; /*largeur bordure*/
+    -webkit-text-stroke-color: $black; /*bordure*/
+	-webkit-text-fill-color: transparent; /*Rend la couleur du texte transparente.*/
 		&:hover{
-			opacity: 0;
+			opacity: 0;  /*transparence réduite*/
 		}
 		&:hover+.full{
 			transform: scale(1); /*Remplissage du coeur à l'echelle*/
 		}
 }
 .full {
-    transform: scale(0); /* Coeur vide*/
+    transform: scale(0); /* coeur plein invisible*/
     transform-origin: bottom; /*part du bas*/
     transition: transform 400ms ease-in-out; /*Effect de la courbe de progression dans l'animation. */
     background: $gradient; 
-    -webkit-text-fill-color: transparent; /*pour le fond noir*/
+    -webkit-text-fill-color: transparent; /*pour le fond noir rend le text transparent*/
 	-webkit-background-clip: text; /*pour le gradient fasse bien la forme coeur*/
-	/*-webkit-text-stroke-color: transparent;*/
 }
 
+/*.checkbox: La case à cocher est initialement cachée.
+.checkbox + .checkbox-label--1::before: Styles pour afficher un cœur vide à l'intérieur de la première étiquette associée 
+à la case à cocher.
+.checkbox:checked + .checkbox-label--1 i::before: Styles appliqués lorsque la case à cocher est cochée,
+utilisés pour créer une liste d'éléments avec des cœurs animés qui passent de vides à pleins lorsqu'ils 
+sont cochés. */
 .checkbox {
 	display: none;
 }
@@ -78,3 +83,4 @@
 	font-size: 1em;
 	-webkit-text-stroke-color: $purple;
 }	
+

@@ -75,7 +75,7 @@ h2 {
 
 .loader_background {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   display: flex;
@@ -83,7 +83,6 @@ h2 {
   align-items: center;
   text-align: center;
   z-index: 10;
-  left: 0;
   animation: loading-screen 3000ms ease-in;
   animation-fill-mode: forwards;
 }
@@ -311,7 +310,7 @@ header {
 .hero_btn:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+  transition: all 1.3s ease;
 }
 .hero_btn a {
   text-decoration: none;
@@ -794,7 +793,7 @@ hr {
 .btn:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+  transition: all 1.3s ease;
 }
 
 .footer {
@@ -866,30 +865,35 @@ hr {
 }
 
 .empty {
-  transform: translateX(1.2em);
-  opacity: 1;
+  transform: translateX(1.2em); /*Déplace l'icône de cœur vide horizontalement de 1.2em.*/
+  opacity: 1; /*icone opaque*/
   background-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000000;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px; /*largeur bordure*/
+  -webkit-text-stroke-color: #000000; /*bordure*/
+  -webkit-text-fill-color: transparent; /*Rend la couleur du texte transparente.*/
 }
 .empty:hover {
-  opacity: 0;
+  opacity: 0; /*transparence réduite*/
 }
 .empty:hover + .full {
   transform: scale(1); /*Remplissage du coeur à l'echelle*/
 }
 
 .full {
-  transform: scale(0); /* Coeur vide*/
+  transform: scale(0); /* coeur plein invisible*/
   transform-origin: bottom; /*part du bas*/
   transition: transform 400ms ease-in-out; /*Effect de la courbe de progression dans l'animation. */
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-text-fill-color: transparent; /*pour le fond noir*/
+  -webkit-text-fill-color: transparent; /*pour le fond noir rend le text transparent*/
   -webkit-background-clip: text; /*pour le gradient fasse bien la forme coeur*/
-  /*-webkit-text-stroke-color: transparent;*/
 }
 
+/*.checkbox: La case à cocher est initialement cachée.
+.checkbox + .checkbox-label--1::before: Styles pour afficher un cœur vide à l'intérieur de la première étiquette associée 
+à la case à cocher.
+.checkbox:checked + .checkbox-label--1 i::before: Styles appliqués lorsque la case à cocher est cochée,
+utilisés pour créer une liste d'éléments avec des cœurs animés qui passent de vides à pleins lorsqu'ils 
+sont cochés. */
 .checkbox {
   display: none;
 }
@@ -1032,19 +1036,6 @@ hr {
   Le premier élément (.case--1) aura un délai de 250ms, le deuxième (.case--2) aura un délai de 500ms, et ainsi de suite.*/
 }
 
-.case:hover .case_price {
-  transform: translate(-60px); /* pour décaler à gauche de 60px à gauche*/
-  padding-left: 65px; /*pour l'apparition des points par réduction de la zone de texte*/
-}
-
-.case:hover .check_anim {
-  transform: translate(-60px);
-}
-
-.case:hover .fa-circle-check {
-  transform: rotate(360deg);
-}
-
 .check_anim {
   position: absolute;
   bottom: 0px;
@@ -1064,6 +1055,19 @@ hr {
   color: #ffffff;
   font-size: 22px;
   transition: transform 350ms 100ms ease-in-out;
+}
+
+.case:hover .case_price {
+  transform: translate(-60px); /* pour décaler à gauche de 60px le prix*/
+  padding-left: 65px; /*pour l'apparition des points par réduction de la zone de texte*/
+}
+
+.case:hover .check_anim {
+  transform: translate(-60px);
+}
+
+.case:hover .fa-circle-check {
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */
